@@ -1,0 +1,17 @@
+.left-column,
+.top-row,
+.top-left-corner {
+  background-color: aqua;
+}
+table,
+tr,
+th,
+td {
+  border: 1px solid;
+}
+
+th,
+td {
+  width: 100px;
+  height: 100px;
+}
