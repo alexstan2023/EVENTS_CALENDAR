@@ -8,10 +8,20 @@ tr,
 th,
 td {
   border: 1px solid;
+  width: 12500px;
 }
 
 th,
 td {
+  width: 500px;
+  height: 100px;
+}
+
+table {
+  table-layout: fixed;
+}
+
+img {
   width: 100px;
   height: 100px;
 }
