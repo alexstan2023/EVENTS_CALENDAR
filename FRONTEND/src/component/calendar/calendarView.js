@@ -1,6 +1,6 @@
 import DayView from "../day/dayView";
 import "./calendarView.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useProps, useParams } from "react-router-dom";
 import Day from "../../utils/day";
 
 function CalendarView() {

@@ -6,13 +6,13 @@ public class EventResponseDto {
 
     private Long id;
     private String name;
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private String startDate;
+    private String endDate;
 
     public EventResponseDto() {
     }
 
-    public EventResponseDto(Long id, String name, LocalDateTime startDate, LocalDateTime endDate) {
+    public EventResponseDto(Long id, String name, String startDate, String endDate) {
         this.id = id;
         this.name = name;
         this.startDate = startDate;
@@ -27,11 +27,11 @@ public class EventResponseDto {
         return name;
     }
 
-    public LocalDateTime getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 }

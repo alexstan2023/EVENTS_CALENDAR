@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<App />}></Route>
+        <Route path="/*" element={<App day={new Date().getDate()} month={new Date().getMonth()} year={new Date().getFullYear()}/>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

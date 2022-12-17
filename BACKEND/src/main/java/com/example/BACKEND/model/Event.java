@@ -1,7 +1,6 @@
 package com.example.BACKEND.model;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table
@@ -12,20 +11,20 @@ public class Event {
     private Long id;
 
     private String name;
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private String startDate;
+    private String endDate;
 
     public Event() {
     }
 
-    public Event(Long id, String name, LocalDateTime startDate, LocalDateTime endDate) {
+    public Event(Long id, String name, String startDate, String endDate) {
         this.id = id;
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
     }
 
-    public Event(String name, LocalDateTime startDate, LocalDateTime endDate) {
+    public Event(String name, String startDate, String endDate) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -47,19 +46,19 @@ public class Event {
         this.name = name;
     }
 
-    public LocalDateTime getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 }

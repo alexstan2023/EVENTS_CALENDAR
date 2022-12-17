@@ -8,6 +8,9 @@ import com.example.BACKEND.service.interfaces.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("event")
 @RestController
@@ -24,6 +27,12 @@ public class EventController {
     public ObjectWrapper<EventResponseDto> addEvent(@RequestBody EventInsertDto eventInsertDto){
         return eventService.addEvent(eventInsertDto);
     }
+
+    @GetMapping
+    public ObjectWrapper<List<EventResponseDto>> getAllEvents(){
+        return eventService.getAllEvents();
+    }
+
     @GetMapping(path="{id}")
     public ObjectWrapper<EventResponseDto> getEventById(@PathVariable Long id){
         return eventService.getEventById(id);
@@ -37,5 +46,10 @@ public class EventController {
     @DeleteMapping(path="{id}")
     public ObjectWrapper<EventResponseDto> deleteEventById(@PathVariable Long id){
         return eventService.deleteEventById(id);
+    }
+
+    @DeleteMapping
+    public void deleteAllEvents(){
+        eventService.deleteAllEvents();
     }
 }
